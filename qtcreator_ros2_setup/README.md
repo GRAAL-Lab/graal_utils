@@ -42,7 +42,7 @@ The variables highlighting will start working after you build the package once.
 
 ### Plugins
 
-To enable **tabs** in the editor, copy the *libTabbedEditor.so* file in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
+To enable **tabs** in the editor, copy the *libTabbedEditor.so* file (precompiled for QtCreator 4.5.2 on a 64-bit Linux) in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
 
 To enable the **automatic formatting** and **code suggestion**:
 
