@@ -1,5 +1,7 @@
 # QtCreator and ROS2 Setup Guide
 
+## Installing 
+
 On Ubuntu 18.04+ you can simply install QtCreator from the official pre-compiled binaries:
 
 ```
@@ -40,7 +42,7 @@ The variables highlighting will start working after you build the package once.
 
 ### Plugins
 
-To enable **tabs** in the editor, copy the *libTabbedEditor.so* file in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins/` folder.
+To enable **tabs** in the editor, copy the *libTabbedEditor.so* file in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
 
 To enable the **automatic formatting** and **code suggestion**:
 
