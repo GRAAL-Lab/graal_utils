@@ -2,16 +2,17 @@
 
 On Ubuntu 18.04+ you can simply install Qt Creator from the official pre-compiled binaries:
 
-    ```
-    sudo apt install qtcreator
-    ```
+```
+#!bash
+sudo apt install qtcreator
+```
     
 Then, to make it work with ROS2 you can simply run in from ROS2 sourced bash.
 Instead, if you'd like to integrate the .desktop launcher with ROS2 open a terminal and type:
 
-   ```
-   locate .desktop | grep qtcreator
-   ```
+```
+locate .desktop | grep qtcreator
+```
    
 And for every .desktop launcher found (e.g. *DigiaQt-qtcreator-community.desktop*), in the **Exec=** property, use:
 
@@ -28,14 +29,14 @@ To enable the **automatic formatting** and **code suggestion**:
 
 1. Download clang-format using:
     
-    ```
-    sudo apt install clang-format
-    ```
+```
+sudo apt install clang-format
+```
     
 2. Open QtCreator and go to *Help->About Plugins...* and enable:
 
-    [x] Beautifier
-    [x] ClangCodeModel
+    - [x] Beautifier
+    - [x] ClangCodeModel
     
 3. Go to *Tools->Options...->Beautifier->Clang Format* and select WebKit as the predefined style.
 
