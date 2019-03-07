@@ -33,16 +33,17 @@ To enable the **automatic formatting** and **code suggestion**:
 
 1. Download clang-format using: `sudo apt install clang-format`
 
-2. Open QtCreator and go to *Help->About Plugins...* and enable:
+2. Open QtCreator and go to *"Help->About Plugins..."* and enable:
 
     - [x] Beautifier
     - [x] ClangCodeModel
 
-3. Go to *Tools->Options...->Beautifier->Clang Format* and select WebKit as the predefined style.
+3. Go to *"Tools->Options...->Beautifier->Clang Format"* and select WebKit as the predefined style.
 
 
 ### Theme
 
-To use the Monokai-RainbowDrops theme, copy the *monokai-brfg_2.xml* file in the `~/.config/QtProject/qtcreator/styles` folder. Then go to 
+To use the Monokai-RainbowDrops theme, copy the *monokai-brfg_2.xml* file in the `~/.config/QtProject/qtcreator/styles` folder.
+Then go to *"Text Editor->Font and Colors->Color Scheme"*
 
 
