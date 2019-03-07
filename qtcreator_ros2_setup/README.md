@@ -44,6 +44,6 @@ To enable the **automatic formatting** and **code suggestion**:
 ### Theme
 
 To use the Monokai-RainbowDrops theme, copy the *monokai-brfg_2.xml* file in the `~/.config/QtProject/qtcreator/styles` folder.
-Then go to *"Text Editor->Font and Colors->Color Scheme"*
+Then go to *"Text Editor->Font and Colors->Color Scheme"* and select it from the drop-down menu.
 
 
