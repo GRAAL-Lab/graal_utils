@@ -23,6 +23,13 @@ And for every .desktop launcher found (e.g. *DigiaQt-qtcreator-community.desktop
 Exec=bash -i -c "sourceros2 && qtcreator"
 ```
 
+where `sourceros2` is an alias you have created in your **~/.bashrc**, e.g.:
+
+```
+#!bash
+alias sourceros2='source /opt/ros/crystal/setup.bash && source ~/ros2_ws/install/setup.bash'
+```
+
 ## Additional QtCreator customization
 
 ### Plugins
