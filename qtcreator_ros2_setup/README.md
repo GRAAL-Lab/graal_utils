@@ -7,8 +7,8 @@ On Ubuntu 18.04+ you can simply install QtCreator from the official pre-compiled
 sudo apt install qtcreator
 ```
     
-Then, to make it work with ROS2 you can simply run in from ROS2 sourced bash.
-Instead, if you'd like to integrate the .desktop launcher with ROS2 open a terminal and type:
+Then, to make it work with ROS2 you can simply run it from a ROS2 sourced bash.
+Otherwise, if you'd like to integrate the .desktop launcher with ROS2, open a terminal and type:
 
 
 ```
