@@ -1,6 +1,6 @@
 # QtCreator and ROS2 Setup Guide
 
-On Ubuntu 18.04+ you can simply install Qt Creator from the official pre-compiled binaries:
+On Ubuntu 18.04+ you can simply install QtCreator from the official pre-compiled binaries:
 
 ```
 #!bash
@@ -38,7 +38,7 @@ To enable the **automatic formatting** and **code suggestion**:
     - [x] Beautifier
     - [x] ClangCodeModel
 
-3. Go to *"Tools->Options...->Beautifier->Clang Format"* and select WebKit as the predefined style.
+3. Go to *"Tools->Options...->Beautifier->Clang Format"* and select **WebKit** as the predefined style.
 
 
 ### Theme
