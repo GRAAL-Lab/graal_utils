@@ -31,12 +31,7 @@ To enable **tabs** in the editor, copy the *libTabbedEditor.so* file in the `/us
 
 To enable the **automatic formatting** and **code suggestion**:
 
-1. Download clang-format using:
-
-```
-#!bash
-sudo apt install clang-format
-```
+1. Download clang-format using: `sudo apt install clang-format`
 
 2. Open QtCreator and go to *Help->About Plugins...* and enable:
 
