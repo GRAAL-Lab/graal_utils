@@ -30,6 +30,12 @@ where `sourceros2` is an alias you have created in your **~/.bashrc**, e.g.:
 alias sourceros2='source /opt/ros/crystal/setup.bash && source ~/ros2_ws/install/setup.bash'
 ```
 
+## Importing packages
+
+Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need to import each package separately. 
+To import a package in QtCreator simply go to *"File->Open File or Project..."* and select the package **CMakeLists.txt**.
+The variables highlighting will start working after you build the package once.
+
 ## Additional QtCreator customization
 
 ### Plugins
