@@ -1,0 +1,23 @@
+\makeatletter
+\newcommand\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\setlength\midchapskip{10pt}
+\makechapterstyle{VZ14}{
+	\renewcommand\chapternamenum{}
+	\renewcommand\printchaptername{}
+	\renewcommand\chapnamefont{\Large\scshape}
+	\renewcommand\printchapternum{%
+		\chapnamefont\null
+		\color{MainColor}\thickhrulefill\color{black}\quad
+		\@chapapp\space\thechapter\quad\color{MainColor}\thickhrulefill\color{black}}
+	\renewcommand\printchapternonum{%
+		%\par\thickhrulefill\par\vskip\midchapskip
+		\hrule\vskip\midchapskip
+	}
+	\renewcommand\chaptitlefont{\Huge\scshape\centering}
+	\renewcommand\afterchapternum{%
+		\par\nobreak\vskip\midchapskip\hrule\vskip\midchapskip}
+	\renewcommand\afterchaptertitle{%
+		\par\vskip\midchapskip\hrule\nobreak\vskip\afterchapskip}
+}
+\makeatother
+\chapterstyle{VZ14}

@@ -1,0 +1,341 @@
+%\usepackage[pdftex,plainpages=false,colorlinks,hyperindex,bookmarksopen,linkcolor=red,cit
+%e color=blue,urlcolor=blue]{hyperref}               % sto usando pdflatex
+
+%\usepackage[pdftex,plainpages=false,colorlinks,hyperindex,pdfpagemode=None,bookmarksopen,linkcolor=red,citecolor=blue,urlcolor=blue]{hyperref}
+%\usepackage[pdftex,plainpages=false,pdfpagemode=None,bookmarksopen,linkcolor=red,citecolor=blue,urlcolor=blue]{}
+
+\usepackage{graphicx}
+\newcommand{\copyleft}{\reflectbox{\textcopyright}}
+\usepackage[svgnames,dvipsnames]{xcolor}
+
+\colorlet{MainColor}{Black}
+
+%\usepackage{caption3}    % abbellisce lo stile delle didascalie
+%\usepackage[boxed]{algorithm}
+
+\newcommand\hmmax{0}
+\newcommand\bmmax{0}
+
+\usepackage{fancybox}
+\usepackage{makeidx}
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+% Vari simboli matematici
+%\usepackage{amssymb}
+%\usepackage{mathrsfs}
+\usepackage{lineno}
+\usepackage{amsthm}
+%\usepackage{bbold}
+%\newcommand\bmmax{2}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{epstopdf}
+\usepackage{adjustbox}
+\usepackage{siunitx}
+\usepackage{fontawesome}
+\usepackage{textcomp}
+\usepackage{adforn}
+\usepackage{fourier-orns}
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\the\month]  \the\year}
+\usepackage{slantsc}
+
+\usepackage{calrsfs}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+%\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\let\mathcal\undefined
+%\newcommand{\mathcal}[1]{\bm{\mathpzc{#1}}}
+\newcommand{\mathcal}[1]{\pazocal{#1}}
+
+%\newcommand{\La}{\mathcal{L}}
+%\newcommand{\Lb}{\pazocal{L}}
+
+%\usepackage[toc,page]{appendix}
+
+\renewcommand*{\cftchapterleader}{\hfill}
+\renewcommand*{\cftsectionleader}{\hfill}
+\renewcommand*{\cftsubsectionleader}{\hfill}
+
+% Listati Cpp
+\usepackage{listings}
+\lstset{language=C++,
+	basicstyle=\fontfamily{cmtt}\fontseries{m}\fontshape{n}\small\selectfont, % print whole listing small
+	keywordstyle=\color{blue},
+	commentstyle=\color{black},
+	basewidth={0.6em,0.45em},
+	frame=single,
+	tabsize=4,
+	showstringspaces=false,
+	breaklines=true,
+	flexiblecolumns=true}
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=single,
+	xleftmargin=\parindent,
+		xrightmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+}
+
+\newcommand{\Cpp}{C\texttt{++}}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Other add-ons, settings and commands
+\modulolinenumbers[5]
+\DeclareGraphicsExtensions{.pdf}
+\renewcommand{\vec}[1]{\bm{#1}}
+\newcommand{\mat}[1]{\bm{#1}}
+\newcommand{\red}{\color{red}}
+
+% Added command for inserting blank page
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
+
+
+\renewcommand{\baselinestretch}{1.25}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+% Bold styled enums
+\setenumerate{label=\textbf{\arabic*.}}
+
+% Caption style
+\captionsetup[figure]{labelfont={bf,footnotesize},textfont={footnotesize}}
+\captionsetup[table]{labelfont={bf,footnotesize},textfont={footnotesize}}
+
+% Hyperlinks
+\usepackage[]{hyperref}
+\hypersetup{
+	plainpages=false,
+	colorlinks,
+	linkcolor = black,
+	citecolor = black,
+	urlcolor = black
+}
+
+%% Margini Originali
+% 1 - margine SINISTRO
+% 2 - margine SUPERIORE
+% 3 - margine DESTRO
+% 4 - margine INFERIORE
+% 5 - RILEGATURA
+% 6 - distanza header/footer -- testo
+% 7/8 - margine note laterali
+%%\setmargins {40mm}{20mm}{25mm}{20mm}     {0mm}{10mm}     {0mm}{0mm}
+\setmargins {40mm}{20mm}{25mm}{20mm}     {0mm}{10mm}     {0mm}{0mm}
+
+\newcommand\chapterwithoutnum[1]{%
+	\chapter*[#1]{#1}%
+	\addcontentsline{toc}{chapter}{#1}
+%	\refstepcounter{chapter}
+}
+
+
+%% LETTRINE
+
+\usepackage{lettrine}
+%\setcounter{DefaultLines}{1}
+%\renewcommand{\DefaultLoversize}{0.4}
+%\setlength{\DefaultNindent}{0em}
+
+%%%%%%%%%%%   MATH HELPERS   %%%%%%%%%%%
+
+% Transformation Matrix
+\newcommand{\tmat}[2]{{\phantom{}^#1_#2\mat{T}}}
+
+% Transformation Matrix
+\newcommand{\rmat}[2]{{\phantom{}^#1_#2\mat{R}}}
+
+% Cartesian Frame
+\newcommand{\cframe}[1]{{\langle#1\rangle}}
+
+% Unit (makes roman, may be better to use siunitx package)
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+
+% Bold math for vectors and matrices
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+% Space around paragraph for cleaner math
+\newcommand*\bigstrut{%
+	\vrule height0.6\baselineskip depth.1\baselineskip width 0pt\relax}
+
+% More spaced square root (cleaner look)
+\newcommand{\bigsqrt}[1]{\sqrt{\bigstrut #1}}
+
+\DeclareMathOperator{\trace}{trace}
+
+\theoremstyle{remark} %<-- Uncomment to remove italics from remark
+\newtheorem*{remark}{\textbf{Remark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% TODOList Styled Itemize
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+	\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+% Post-it style box
+\usepackage{varwidth}
+\usepackage[most]{tcolorbox}
+\newtcbox{yellowbox}[1][]{enhanced jigsaw, 
+	sharp corners,
+	drop fuzzy shadow=black!30!white,
+	colback=yellow!40!white,
+	center,
+	varwidth upper=0.8\linewidth,
+	fonttitle=\bfseries,
+	%	frame hidden,
+	#1}
+
+\newtcbox{greenbox}[1][]{enhanced jigsaw, 
+	sharp corners,
+	drop fuzzy shadow=black!30!white,
+	colback=Green!40!white,
+	center,
+	varwidth upper=0.8\linewidth,
+	fonttitle=\bfseries,
+	%	frame hidden,
+	#1}
+
+\newtcbox{enhancebox}[1][]{enhanced jigsaw, 
+	sharp corners,
+	%drop fuzzy shadow=black!30!white,
+	colback=Gray!20!white,
+	center,
+	varwidth upper=\linewidth,
+	% fonttitle=\bfseries,
+	frame hidden,
+	#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Some useful commands/variables for Tasks
+\newcommand{\reactTask}{\texttt{r}}
+\newcommand{\nonReactTask}{\texttt{nr}}
+\newcommand{\eqTask}{$=$}
+\newcommand{\ineqTask}{$\lessgtr$}
+\newcommand{\constrTask}{\texttt{C}}
+\newcommand{\safetyTask}{\texttt{S}}
+\newcommand{\prereqTask}{\texttt{P}}
+\newcommand{\actdefTask}{\texttt{A}}
+\newcommand{\optimTask}{\texttt{O}}
+
+\newcommand{\JointLimitsTask}{{[\reactTask, \ineqTask, \safetyTask]} Arm joints limits}
+\newcommand{\ManipTask}{{[\reactTask, \ineqTask, \safetyTask]} Arm manipulability}
+\newcommand{\ToolFramePosTask}{{[\reactTask, \eqTask, \actdefTask]} Tool frame position control}
+\newcommand{\ToolFrameOriTask}{{[\reactTask, \eqTask, \actdefTask]} Tool frame orientation control}
+\newcommand{\RigidGraspTask}{{[\reactTask, \eqTask, \constrTask]} Rigid grasp constraint}
+\newcommand{\ArmShapeTask}{{[\reactTask, \ineqTask, \optimTask]} Arm preferred shape}
+\newcommand{\ArmObstAvoidTask}{{[\reactTask, \ineqTask, \safetyTask]} Arm obstacle avoidance}
+\newcommand{\VehMinDistTask}{{[\reactTask, \ineqTask, \safetyTask]} Vehicle minimum distance}
+\newcommand{\CameraCentTask}{{[\reactTask, \ineqTask, \safetyTask]} Camera object centring}
+\newcommand{\VehAttitudeTask}{{[\reactTask, \ineqTask, \safetyTask]} Vehicle horizontal attitude}
+\newcommand{\VehPositionTask}{{[\reactTask, \eqTask, \safetyTask]} Vehicle position control}
+\newcommand{\MinimMovemTask}{{[\reactTask, \ineqTask, \safetyTask]} Minimization of arm and vehicle movements}
+\newcommand{\ConstrToolVelTask}{{[\nonReactTask, \eqTask, \constrTask]} Constrained tool-frame velocity}
+\newcommand{\ForceRegTask}{{[\reactTask, \eqTask, \constrTask]}  Constraint complying and Force regulation}
+\newcommand{\ToolAlignTask}{{[\reactTask, \eqTask, \prereqTask]} 
+	Tool frame alignment with the object surface}
+
+% Both single quotes
+\def\bsq#1{
+	\lq{#1}\rq}
+
+%% Words Stretching variables
+\newdimen\origiwspc%
+\newdimen\origiwstr%
+\origiwspc=\fontdimen2\font% original inter word space
+\origiwstr=\fontdimen3\font% original inter word stretch
+
+
+%%%%%%%  STANDARDIZED TPIK TASK LIST   %%%%%%
+\newenvironment{tasklist}%
+{%
+	\begin{samepage}%
+		\begin{enumerate}[label={$\bm{o_{\arabic*}}$\textbf{)}}]%
+			\setlength\itemsep{-.2em}%
+		}%
+		{%
+		\end{enumerate}%
+	\end{samepage}%
+}
+
+%%%%%   INCREASING, DEACREASING SIGMOID   %%%%%
+
+\newcommand{\sigmaIncr}[2]{
+	\sigma_{\uparrow}(#1, #2)%
+}
+
+\newcommand{\sigmaDecr}[2]{
+	\sigma_{\downarrow}(#1, #2)%
+}
+
+
+%%%%   PAGE HEADERS   %%%%  <-- This needs to be put at the end to respect page margins
+\let\footruleskip\undefined
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\pagestyle{fancy}
+%\pagestyle{plain}
+\fancyhead{}
+\fancyhead[RE,RO]{\MakeTextUppercase{\small \leftmark}}
+
+
+%\renewcommand{\headrulewidth}{0.0pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+% According to the fancyhdr-documentation, the default layout is produced by
+% the following commands:
+
+%\fancyhead[LE,RO]{\slshape \rightmark}
+%\fancyhead[LO,RE]{\slshape \leftmark}
+%\fancyfoot[C]{\thepage}
+%\headrulewidth 0.4pt
+%\footrulewidth 0 pt
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+\newcommand{\termIcon}{\tiny \colorbox{Gray}{\color{white}{\faicon{terminal}}}}
+
+\newcommand{\termItemize}{\raisebox{0.2em}{\protect\circled{\tiny \faicon{terminal}}}}
+
+\newcommand{\bookItemize}{\raisebox{0.1em}{\scriptsize \faicon{bookmark}}}
+
+%\usepackage{newunicodechar} % To write the definition on the next line
+%\newunicodechar{ω}{\ensuremath{\omega}}
+
