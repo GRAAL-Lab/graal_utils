@@ -34,9 +34,13 @@ alias sourceros2='source /opt/ros/crystal/setup.bash && source ~/ros2_ws/install
 
 ## Importing packages
 
-Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need to import each package separately. 
-To import a package in QtCreator simply go to *"File->Open File or Project..."* and select the package **CMakeLists.txt**.
-The variables highlighting will start working after you build the package once.
+Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need to import each package separately. To import a package in QtCreator:
+
+1. Go to *"File->Open File or Project..."* and select the package **CMakeLists.txt**.
+
+2. In the "Configure Project" step, deselect all the build configurations and leave only the **Debug** one. Be careful to change the build folder to something different, which by default builds in the `src` folder (messing up the workspace).
+
+*NOTE*: The variables highlighting will start working after you build the package once.
 
 ## Additional QtCreator customization
 
@@ -55,6 +59,7 @@ To enable the **automatic formatting** and **clang warnings**:
 
 3. Go to *"Tools->Options...->Beautifier->Clang Format"* and select **WebKit** as the predefined style.
 
+4. To create a formatting keyboard shortcut go to *"Tools->Options...->Environment->Keyboard"*, look for the *Format Current File* command under **ClangFormat** and assign a new shortcut, e.g. `Ctrl+Atl+K`.
 
 ### Theme
 
