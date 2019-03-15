@@ -59,7 +59,7 @@ To enable the **automatic formatting** and **clang warnings**:
 
 3. Go to *"Tools->Options...->Beautifier->Clang Format"* and select **WebKit** as the predefined style.
 
-4. To create a formatting keyboard shortcut go to *"Tools->Options...->Environment->Keyboard"*, look for the *Format Current File* command under **ClangFormat** and assign a new shortcut, e.g. `Ctrl+Atl+K`.
+4. To create a formatting keyboard shortcut go to *"Tools->Options...->Environment->Keyboard"*, look for the *Format Current File* command under **ClangFormat** and assign a new shortcut, e.g. `Ctrl+Alt+K`.
 
 ### Theme
 
