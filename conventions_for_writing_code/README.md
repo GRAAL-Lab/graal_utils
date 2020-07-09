@@ -47,7 +47,7 @@ Getter and setter method should be written in modern c++ style.
    * __Example__: bodyF_x or bodyF_x_
    
 
-  1. If we want to define a Rotation or a Transformation matrix from frame *body* to *world* b, it should be put first the *body frame* then the variable frame and finally the *world frame*. 
+  2. If we want to define a Rotation or a Transformation matrix from frame *body* to *world* b, it should be put first the *body frame* then the variable frame and finally the *world frame*. 
 
    * __Example__: bodyF_R_worldF or   bodyF_R_worldF_
 
