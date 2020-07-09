@@ -6,13 +6,13 @@ A collection of conventions and guides on how to write code consistent with exis
 
 * The filename has to be written in lowercase and with *underscores* among different words
 
-  * #### Example: test_file.cpp
+  * __Example__: test_file.cpp
 
 ## Classes
 
 * Also the classes name should be written as the file name 
 
-  * #### Example: foo.cpp
+  * __Example__: foo.cpp
 
 Getter and setter method should be written in modern c++ style.
 
@@ -32,30 +32,30 @@ Getter and setter method should be written in modern c++ style.
 
 * Private variable should be written with lowercase  and with an underscore at the end
 
-  * #### Example: x_
+  * __Example__: x_
 
 
 * Public variable should be written as private ones but without the end underscore
 
 
-  * #### Example: x
+  * __Example__: x
 
 * Variable that specifies frames in the name must be written according to the following convention: 
 
   1. If we want to define a variable that is express in the same frame, first it should be written the frame name following by underscore and then the variable name (with or without the underscore depending on whether the variable is private or public)
 
-   * #### Example: frameID_x or frameID_x_
+   * __Example__: bodyF_x or bodyF_x_
    
 
-  1. If we want to define a Rotation or a Transformation matrix from frame a to frame b, it should be put first the *a* frame then the variable frame and finally the *b* frame. 
+  1. If we want to define a Rotation or a Transformation matrix from frame *body* to *world* b, it should be put first the *body frame* then the variable frame and finally the *world frame*. 
 
-   * #### Example: a_R_b or  a_R_b_
+   * __Example__: bodyF_R_worldF or   bodyF_R_worldF_
 
 ## Funtions
 
 * Functions should be defined with the first letter and all the letters of a new word in uppercase and without underscore
 
-  * #### Example: DoSomething()
+  * __Example__: DoSomething()
 
 ## Configuration Files
 
