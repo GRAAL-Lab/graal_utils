@@ -35,7 +35,8 @@ alias sourceros2='source /opt/ros/crystal/setup.bash && source ~/ros2_ws/install
 ## Importing packages
 
 Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need to import each package separately. To import a package in QtCreator:
-0. From Ubuntu 20.04 we run into a environment variables issue (to be fixed). Before launch qtcreator in a rps sourced bash type the command: CMAKE_PREFIX_PATH=$AMENT_PREFIX_PATH:$CMAKE_PREFIX_PATH 
+
+0. From Ubuntu 20.04 we run into a environment variables issue (to be fixed). Before launch qtcreator in a ros2 sourced bash type the command: CMAKE_PREFIX_PATH=$AMENT_PREFIX_PATH:$CMAKE_PREFIX_PATH 
 
 1. Go to *"File->Open File or Project..."* and select the package **CMakeLists.txt**.
 
