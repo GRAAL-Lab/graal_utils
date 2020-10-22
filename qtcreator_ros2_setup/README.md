@@ -48,7 +48,7 @@ Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need
 
 ### Plugins
 
-To enable **tabs** in the editor, copy the *libTabbedEditor.so* file (precompiled for QtCreator 4.5.2 on a 64-bit Linux) in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
+(Currently not working for Ubuntu 20.04) To enable **tabs** in the editor, copy the *libTabbedEditor.so* file (precompiled for QtCreator 4.5.2 on a 64-bit Linux) in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
 
 To enable the **automatic formatting** and **clang warnings**:
 
@@ -65,7 +65,7 @@ To enable the **automatic formatting** and **clang warnings**:
 
 ### Theme
 
-To use the Monokai-RainbowDrops theme, copy the *monokai-brfg_2.xml* file in the `~/.config/QtProject/qtcreator/styles` folder.
+To use the Monokai-RainbowDrops theme, copy the *monokai-brfg_2.xml* file in the `/usr/share/qtcreator/styles` folder.
 Then go to *"Text Editor->Font and Colors->Color Scheme"* and select it from the drop-down menu.
 
 
