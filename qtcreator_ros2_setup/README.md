@@ -12,11 +12,11 @@ sudo apt install qtcreator
 Then, to make it work with ROS2 you can simply run it from a ROS2 sourced bash.
 Otherwise, if you'd like to integrate the .desktop launcher with ROS2, open a terminal and type:
 
-
 ```
 #!bash
 locate .desktop | grep qtcreator```
-   
+```
+
 And for every .desktop launcher found (e.g. *DigiaQt-qtcreator-community.desktop*), in the **Exec=** property, use:
 
 ```
@@ -25,9 +25,11 @@ Exec=bash -i -c "sourceros2 && qtcreator"
 ```
 
 where `sourceros2` is an alias you have created in your **~/.bashrc**, e.g.:
+
 ```
 #!bash
 alias sourceros2='source /opt/ros/crystal/setup.bash && source ~/ros2_ws/install/setup.bash'
+```
 
 Required dependecy: apt install libclang-common-8-dev
 `
