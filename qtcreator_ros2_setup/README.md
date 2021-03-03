@@ -14,7 +14,7 @@ Otherwise, if you'd like to integrate the .desktop launcher with ROS2, open a te
 
 ```
 #!bash
-locate .desktop | grep qtcreator```
+locate .desktop | grep qtcreator
 ```
 
 And for every .desktop launcher found (e.g. *DigiaQt-qtcreator-community.desktop*), in the **Exec=** property, use:
