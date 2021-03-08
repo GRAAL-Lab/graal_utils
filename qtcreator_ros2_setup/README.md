@@ -36,13 +36,13 @@ Required dependecy: apt install libclang-common-8-dev
 
 ## Importing packages
 
-Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need to import each package separately. To import a package in QtCreator:
+Differently from ROS1, you cannot import whole ROS2 workspaces, instead you need to import each package separately.
 
-0. From Ubuntu 20.04 we run into a environment variables issue (to be fixed). Before launch qtcreator in a ros2 sourced bash type the command: CMAKE_PREFIX_PATH=$AMENT_PREFIX_PATH:$CMAKE_PREFIX_PATH 
+To import a ROS2 package in QtCreator:
 
-1. Go to *"File->Open File or Project..."* and select the package **CMakeLists.txt**.
+0. Go to *"File->Open File or Project..."* and select the package **CMakeLists.txt**.
 
-2. In the "Configure Project" step, deselect all the build configurations and leave only the **Debug** one. Be careful to change the build folder to something different, which by default builds in the `src` folder (messing up the workspace).
+0. In the "Configure Project" step, deselect all the build configurations and leave only the **Debug** one. Be careful to change the build folder to something different, which by default builds in the `src` folder (messing up the workspace).
 
 *NOTE*: The variables highlighting will start working after you build the package once.
 
