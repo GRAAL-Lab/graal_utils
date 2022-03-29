@@ -4,58 +4,48 @@ A collection of conventions and guides on how to write code consistent with exis
 
 ## Files
 
-* The filename has to be written in lowercase and with *underscores* among different words
-
-  * __Example__: test_file.cpp
+The filename has to be written in lowercase and with *underscores* among different words
+Example: **test_file.cpp**
 
 ## Classes
 
-* Also the classes name should be written as the file name 
+Also the classes name should be written as the file name 
+Example: **foo.cpp**
 
-  * __Example__: foo.cpp
+Getter and setter method should be written in modern c++ style. In the examples `X` is the type, `x()` is the function and `x_` is the class variable.
 
-Getter and setter method should be written in modern c++ style.
-
-* If the return type can be modify be reference:
-
-  1. **Setter**: auto X() -> type& { return x_; }
-  
-  2. **Getter**: auto X() const -> const type& { return x_ ; }
- 
-* Otherwise: 
-
-  1. **Setter**: auto X(tyoe x) -> type { x_ =  x; }
-  
-  2. **Getter**: auto X() const -> type { return x_; }
+* Using classic c++:
+    1. **Setter**: `X&       x()        { return x_; }`
+    2. **Getter**: `const X& x() const  { return x_; }`
+        
+* Otherwise, using modern trailing return function and auto: 
+    1. **Setter**: `auto x()       -> X&       { return x_; }`
+    2. **Getter**: `auto x() const -> const X& { return x_; }`
 
 ## Variables 
 
-* Private variable should be written with lowercase  and with an underscore at the end
+Private variable should be written with lowercase  and with an underscore at the end:
 
-  * __Example__: x_
-
-
-* Public variable should be written as private ones but without the end underscore
+* Example: `x_`
 
 
-  * __Example__: x
+Public variable should be written as private ones but without the end underscore
 
-* Variable that specifies frames in the name must be written according to the following convention: 
+* Example: `x`
 
-  1. If we want to define a variable that is express in the same frame, first it should be written the frame name following by underscore and then the variable name (with or without the underscore depending on whether the variable is private or public)
+Variable that specifies frames in the name must be written according to the following convention:
 
-   * __Example__: bodyF_x or bodyF_x_
-   
+1. If we want to define a variable that is express in the same frame, first it should be written the frame name following by underscore and then the variable name (with or without the underscore depending on whether the variable is private or public)
+    * Example: `bodyF_x` or `bodyF_x_`
 
-  2. If we want to define a Rotation or a Transformation matrix from frame *body* to *world* b, it should be put first the *body frame* then the variable frame and finally the *world frame*. 
+2. If we want to define a Rotation or a Transformation matrix from frame *body* to *world* b, it should be put first the *body frame* then the variable frame and finally the *world frame*. 
+    * Example: `bodyF_R_worldF` or `bodyF_R_worldF_`
 
-   * __Example__: bodyF_R_worldF or   bodyF_R_worldF_
+## Functions
 
-## Funtions
+Functions should be defined with the first letter and all the letters of a new word in uppercase and without underscore
 
-* Functions should be defined with the first letter and all the letters of a new word in uppercase and without underscore
-
-  * __Example__: DoSomething()
+* Example: `DoSomething()`
 
 ## Configuration Files
 
