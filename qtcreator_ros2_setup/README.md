@@ -50,8 +50,6 @@ To import a ROS2 package in QtCreator:
 
 ### Plugins
 
-(Currently not working for Ubuntu 20.04) To enable **tabs** in the editor, copy the *libTabbedEditor.so* file (precompiled for QtCreator 4.5.2 on a 64-bit Linux) in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
-
 To enable the **automatic formatting** and **clang warnings**:
 
 1. Download clang-format using: `sudo apt install clang-format`
@@ -64,6 +62,10 @@ To enable the **automatic formatting** and **clang warnings**:
 3. Go to *"Tools->Options...->Beautifier->Clang Format"* and select **WebKit** as the predefined style.
 
 4. To create a formatting keyboard shortcut go to *"Tools->Options...->Environment->Keyboard"*, look for the *Format Current File* command under **ClangFormat** and assign a new shortcut, e.g. `Ctrl+Alt+K`.
+
+
+To enable **tabs** in the editor (currently not working for Ubuntu 20.04), copy the *libTabbedEditor.so* file (precompiled for QtCreator 4.5.2 on a 64-bit Linux) in the `/usr/lib/x86_64-linux-gnu/qtcreator/plugins` folder.
+
 
 ### Theme
 
