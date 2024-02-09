@@ -3,7 +3,7 @@ GRN='\033[1;32m'
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 
-# Libraries needed for the ctrl_toolbox
+# Generic libraries needed for math, geographic and configuration operations
 sudo apt install -y libeigen3-dev libgeographic-dev libconfig++-dev
 
 # Libraries needed for vehicles GPS drivers
