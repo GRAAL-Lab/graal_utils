@@ -4,7 +4,7 @@ RED='\033[1;31m'
 NC='\033[0m' # No Color
 
 # Generic libraries needed for math, geographic and configuration operations
-sudo apt install -y libeigen3-dev libgeographic-dev libconfig++-dev
+sudo apt install -y libeigen3-dev libgeographic-dev libconfig++-dev libboost-all-dev
 
 # Libraries needed for vehicles GPS drivers
 sudo apt install -y libgps-dev gpsd-clients
