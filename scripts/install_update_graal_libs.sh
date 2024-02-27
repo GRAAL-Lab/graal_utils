@@ -13,7 +13,7 @@ sudo apt install -y libgps-dev gpsd-clients
 sudo apt install -y qtquickcontrols2-5-dev qtlocation5-dev qtpositioning5-dev qml-module-qtquick-controls2 qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel qml-module-qtlocation qml-module-qtpositioning qml-module-qtquick-extras qml-module-qtgraphicaleffects qml-module-qtquick-dialogs qml-module-qtquick-controls python3-colcon-common-extensions qml-module-qtqml-models2
 
 # Do I need to say anything?
-sudo apt install -y git
+sudo apt install -y cmake git
 
 # Create "graal_ws" folder
 cd ~
