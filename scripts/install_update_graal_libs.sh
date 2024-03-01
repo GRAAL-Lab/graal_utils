@@ -22,20 +22,28 @@ if ! [ -d graal_ws ]; then
 fi
 cd graal_ws
 
-git clone https://github.com/SINTEF-Geometry/SISL.git
-cd SISL
+if ! [ -d "SISL" ]; then
+  git clone https://github.com/SINTEF-Geometry/SISL.git
+  cd SISL
+else
+  cd SISL
+  git pull
+fi
+  
 if [ "${PWD##*/}" = "SISL" ]; then
-    if ! [ -d build ]; then
-        mkdir build
-    fi
-    
-    cd build
-    cmake ..
-    sudo make install
-    cd ../..
+  if ! [ -d build ]; then
+    mkdir build
+  fi
+
+  cd build
+  cmake ..
+  sudo make install
+  cd ../..
 else
     echo -e "${RED}Error cloning \'SISL\' repository!${NC}"
 fi
+
+cd graal_ws
 
 ## All the GRAAL repository to install in DEPENDENCY ORDER:
 # - RML: Robotics Mathematical Library
