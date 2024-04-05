@@ -4,13 +4,15 @@ A collection of conventions and guides on how to write code consistent with exis
 
 ## Files
 
-The filename has to be written in lowercase and with *underscores* among different words
-Example: **test_file.cpp**
+The filename has to be written in snake_case (lowercase and with *underscores* among different words)
+
+Example: **test_class.cpp**
 
 ## Classes
 
-Also the classes name should be written as the file name 
-Example: **foo.cpp**
+The classes name should be the same as the file but in CamelCase (uppercase words)
+
+Example: **TestClass**
 
 Getter and setter method should be written in modern c++ style. In the examples `X` is the type, `x()` is the function and `x_` is the class variable.
 
