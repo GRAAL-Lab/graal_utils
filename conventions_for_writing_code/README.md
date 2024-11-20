@@ -25,15 +25,19 @@ Getter and setter method should be written in modern c++ style. In the examples 
     2. **Getter**: `auto x() const -> const X& { return x_; }`
 
 ## Variables 
+Variable should be written in lower camelCase: 
 
-Private variable should be written with lowercase  and with an underscore at the end:
-
-* Example: `x_`
+* Example: `myVariable`
 
 
-Public variable should be written as private ones but without the end underscore
+Private variable should be written in camelCase and with an underscore at the end:
 
-* Example: `x`
+* Example: `myVariable_`
+
+
+
+
+
 
 Variable that specifies frames in the name must be written according to the following convention:
 
