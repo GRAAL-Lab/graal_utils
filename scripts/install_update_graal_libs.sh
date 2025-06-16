@@ -3,8 +3,38 @@ GRN='\033[1;32m'
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 
+#!/usr/bin/env bash
+
+source /etc/lsb-release
+
+if [ -z $DISTRIB_RELEASE ] || [ -z $DISTRIB_ID ]; then
+    echo "DISTRIB_RELEASE and DISTRIB_ID are not set"
+else
+    if [ $DISTRIB_ID == "Ubuntu" ]; then
+        IFS='.' read -r -a distro_vers <<< $DISTRIB_RELEASE
+        major_ver=${distro_vers[0]}
+        #echo "Distro major version $major_ver"
+        if [ -z $major_ver ]; then
+            echo "Major release version parsing failed"
+        else
+            if [ $(($major_ver)) -ge 24 ]; then
+                #echo "Ubuntu major version is greater or equal than 24"
+                sudo apt install -y libgeographiclib-dev 
+            else
+                #echo "Ubuntu major version is lesser than 24 (22, 20)"
+                sudo apt install -y libgeographic-dev
+            fi
+        fi
+    else
+        echo "It is not ubuntu linux"
+    fi
+fi
+
+exit
+
+
 # Generic libraries needed for math, geographic and configuration operations
-sudo apt install -y libeigen3-dev libgeographic-dev libconfig++-dev libboost-all-dev
+sudo apt install -y libeigen3-dev libconfig++-dev libboost-all-dev
 
 # Libraries needed for vehicles GPS drivers
 sudo apt install -y libgps-dev gpsd-clients
