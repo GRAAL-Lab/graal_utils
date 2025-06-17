@@ -30,7 +30,6 @@ else
     fi
 fi
 
-exit
 
 
 # Generic libraries needed for math, geographic and configuration operations
