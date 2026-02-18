@@ -72,7 +72,7 @@ else
     echo -e "${RED}Error cloning \'SISL\' repository!${NC}"
 fi
 
-cd graal_ws
+cd ~/graal_ws
 
 ## All the GRAAL repository to install in DEPENDENCY ORDER:
 # - RML: Robotics Mathematical Library
