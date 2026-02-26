@@ -46,6 +46,8 @@ The page is built dynamically using a Joomla Module (which is inserted in the Ab
 
 Plugin: [**Bibtex formatter**](https://extensions.joomla.org/extension/bibtex-formatter/).
 
-This plugin works using a bibtex file. The folder where the .bib files should be placed can be changed and by now is set to: `bibtex/phd_theses` (in the root folder).
+This plugin works using a bibtex file. The folder where the .bib files are be placed can be changed, and by now is set to: `bibtex/phd_theses` (in the root folder).
 
-To add a new entry simply update the bibtex file: `bibtex/phd_theses/phd_theses.bib`
+To add a new entry simply update the bibtex file: `bibtex/phd_theses/phd_theses.bib`.
+
+To add also a PDF file you need first to add with the Media Manager to the files, in: `Content->Media`, and the select "`Local/files/phd_theses`" in the file manager. Then you can add the **pdf** field in the bib entry.
