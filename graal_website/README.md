@@ -6,6 +6,16 @@ CMS is Joomla 5.
 
 This is a set of info on the different modules used on the pages.
 
+To access the website via FTP for file upload you should first connect to the DIBRIS VPN (GlobalProtect), ask <assistenza@dibris.unige.it>.
+
+The credentials are:
+```
+IP: 130.251.1.26
+user: graaladmin
+pwd: R1c3rc4D3lGr44l
+```
+
+
 ## Page building and Template
 
 The site Style used is [**Helix Ultimate**](https://www.joomla.it/blog/8956-helix-ultimate-framework.html).
@@ -17,6 +27,8 @@ By now the only page not built like this, but as a Joomla Article, is the "Phd T
 ## Projects
 
 Module: [**TZ Portfolio**](https://extensions.joomla.org/extension/tz-portfolio/).
+
+
 
 ## About Us
 
@@ -32,4 +44,8 @@ The page is built dynamically using a Joomla Module (which is inserted in the Ab
 
 ## PhD Theses
 
-[**Bibtex formatter**](https://extensions.joomla.org/extension/bibtex-formatter/).
+Plugin: [**Bibtex formatter**](https://extensions.joomla.org/extension/bibtex-formatter/).
+
+This plugin works using a bibtex file. The folder where the .bib files should be placed can be changed and by now is set to: `bibtex/phd_theses` (in the root folder).
+
+To add a new entry simply update the bibtex file: `bibtex/phd_theses/phd_theses.bib`
