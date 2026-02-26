@@ -1,4 +1,8 @@
-### Pages Info
+# GRAAL Website
+
+https://graal.dibris.unige.it
+
+CMS is Joomla 5.
 
 This is a set of info on the different modules used on the pages.
 
