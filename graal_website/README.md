@@ -28,7 +28,16 @@ By now the only page not built like this, but as a Joomla Article, is the "Phd T
 
 Module: [**TZ Portfolio**](https://extensions.joomla.org/extension/tz-portfolio/).
 
+The portolio can be accessed in: `Components->TZ Portfolio Plus`.
 
+
+There are two modules in `Content->Site Modules`:
+  - Current Projects Portfolio
+  - Past Projects Portfolio
+
+They just differ from the selected Category in the module.
+
+To add/move/delete a project go to `Components->TZ Portfolio Plus->Articles` and create a new one, selecting the "Main Category" as needed. If you have an image select as "Media Type" the option "Image", and upload one in the Image tab below. 
 
 ## About Us
 
