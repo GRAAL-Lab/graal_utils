@@ -24,7 +24,7 @@ Most of the pages are built with [**SP Page Builder**](https://extensions.joomla
 
 By now the only page not built like this, but as a Joomla Article, is the "Phd Theses" page, due to how the Bibtex plugin works (the {bibtex} hook is catched only on Articles).
 
-At the end of this file are the CSS modifications added in the Custom CSS of the Helix, edited via `System->Site Template Styles->shaper_helixultimate - Default" and then clicking on **Template Options**.
+At the end of this file are the CSS modifications added in the Custom CSS of the Helix style.
 
 ## Page: Projects
 
@@ -72,4 +72,109 @@ To add a new entry simply update the bibtex file: `bibtex/phd_theses/phd_theses.
 To add also a PDF file you need first to add with the Media Manager to the files, in: `Content->Media`, and the select "`Local/files/phd_theses`" in the file manager. Then you can add the **pdf** field in the bib entry.
 
 ## CSS Hacks in the Template
+
+These additions are edited via `System->Site Template Styles->shaper_helixultimate - Default` and then clicking on **Template Options**.
+
+Within the options, in the `</> Custom Code` tab:
+
+- Before head:
+
+```
+<!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a6f51ac9c006be17b7cc931b/script.js"></script> <!-- End cookieyes banner -->
+```
+
+-  Custom CSS 
+
+```
+.article-details {
+    margin:    0 auto;
+    max-width: 1200px;
+}
+
+.sp-megamenu-parent > li > a {
+    text-transform: uppercase;
+}
+
+/* Helix Ultimate: prevent the Projects dropdown from showing */
+.sp-megamenu-parent > li.sp-menu-item.sp-has-child.active > .sp-dropdown,
+.sp-megamenu-parent > li.sp-menu-item.sp-has-child > .sp-dropdown {
+  display: none !important;
+}
+
+/* Optional: remove dropdown arrow/caret if Helix adds one */
+.sp-megamenu-parent > li.sp-menu-item.sp-has-child > a:after {
+  display: none !important;
+}
+
+#sp-main-body {
+  padding: 50px 0;
+}
+
+
+/* Add some vertical margin for PageBuilder images when in column */
+@media only screen and (max-width: 1300px) {
+
+.sppb-addon-single-image-container {
+   margin-bottom: 50px !important;
+}
+
+.contact .col-lg-auto {
+    display: none;
+}
+}
+
+/* Customise Trombinoscope Contact Position Color */
+.person_position {
+color: #003366;
+}
+
+.tp-item-tools {
+    display: none
+}
+
+/* Make YouTube Embedding responsive */
+.rwd-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.rwd-video iframe,
+.rwd-video object,
+.rwd-video embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 10px;
+}
+
+/* Customize TZ Portfolio Article */
+.tpItemPage .tpArticleMedia img {
+  width: 75%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-name {
+   font-size: 90%;
+}
+
+.com-contact.contact {
+  padding: 0px 1.5em 0px 1.5em;
+}
+
+.tpp-bootstrap .btn-primary {
+  color: #fff;
+  background-color: var(--template-link-color);
+  border-color: var(--template-link-color);
+}
+
+.tpp-author-about {
+  display: none !important;
+}
+```
 
