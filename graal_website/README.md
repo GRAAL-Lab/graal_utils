@@ -12,7 +12,7 @@ The credentials are:
 ```
 IP: 130.251.1.26
 user: graaladmin
-pwd: R1c3rc4D3lGr44l
+pwd: (ask assistenza@dibris.unige.it)
 ```
 
 
@@ -177,4 +177,6 @@ color: #003366;
   display: none !important;
 }
 ```
+
+R1c3rc4D3lGr44l
 
