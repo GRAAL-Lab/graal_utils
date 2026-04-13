@@ -15,16 +15,14 @@ user: graaladmin
 pwd: (ask assistenza@dibris.unige.it)
 ```
 
-
 ## Page building and Template
 
 The site Style used is [**Helix Ultimate**](https://www.joomla.it/blog/8956-helix-ultimate-framework.html).
 
-Most of the pages are built with [**SP Page Builder**](https://extensions.joomla.org/extension/sp-page-builder/), which you can find in:  `Components->SP Page Builder->Pages`.
-
-By now the only page not built like this, but as a Joomla Article, is the "Phd Theses" page, due to how the Bibtex plugin works (the {bibtex} hook is catched only on Articles).
+All of the pages are built with [**SP Page Builder**](https://extensions.joomla.org/extension/sp-page-builder/), which you can find in:  `Components->SP Page Builder->Pages`.
 
 At the end of this file are the CSS modifications added in the Custom CSS of the Helix style.
+
 
 ## Page: Projects
 
@@ -32,14 +30,15 @@ Module: [**TZ Portfolio**](https://extensions.joomla.org/extension/tz-portfolio/
 
 The portolio can be accessed in: `Components->TZ Portfolio Plus`.
 
-
 There are two modules in `Content->Site Modules`:
+
   - Current Projects Portfolio
   - Past Projects Portfolio
 
 They just differ from the selected Category in the module.
 
 To add/move/delete a project go to `Components->TZ Portfolio Plus->Articles` and create a new one, selecting the "Main Category" as needed. If you have an image select as "Media Type" the option "Image", and upload one in the Image tab below. 
+
 
 ### Correct Menu Routing
 
@@ -48,6 +47,7 @@ When clicking on an a project, by default the website takes you to a TZ Portfoli
 To correct this behaviour you need to create a Menu Item in `Menus->Main Menu` for the project, selecting "TZ Portfolio Plus->Single Article" in the "Menu Item Type", and then choosing the correct article.
 
 (a CSS hack has been done to hide an infinite drop-down menu in the Main Menu, with all the projects).
+
 
 ## Page: About Us
 
@@ -61,6 +61,7 @@ To add/remove people in About Us page the following actions are needed:
 
 The page is built dynamically using a Joomla Module (which is inserted in the About Us "SP Page Builder" page).
 
+
 ## Page: PhD Theses
 
 Plugin: [**Bibtex formatter**](https://extensions.joomla.org/extension/bibtex-formatter/).
@@ -70,6 +71,7 @@ This plugin works using a bibtex file. The folder where the .bib files are be pl
 To add a new entry simply update the bibtex file: `bibtex/phd_theses/phd_theses.bib`.
 
 To add also a PDF file you need first to add with the Media Manager to the files, in: `Content->Media`, and the select "`Local/files/phd_theses`" in the file manager. Then you can add the **pdf** field in the bib entry.
+
 
 ## CSS Hacks in the Template
 
@@ -95,16 +97,30 @@ Within the options, in the `</> Custom Code` tab:
     text-transform: uppercase;
 }
 
-/* Helix Ultimate: prevent the Projects dropdown from showing */
-.sp-megamenu-parent > li.sp-menu-item.sp-has-child.active > .sp-dropdown,
-.sp-megamenu-parent > li.sp-menu-item.sp-has-child > .sp-dropdown {
-  display: none !important;
+/* =========================
+   DESKTOP – hide all dropdown menus
+   ========================= */
+.sp-megamenu-parent .sp-dropdown {
+    display: none !important;
 }
 
-/* Optional: remove dropdown arrow/caret if Helix adds one */
-.sp-megamenu-parent > li.sp-menu-item.sp-has-child > a:after {
-  display: none !important;
+/* Remove dropdown arrow indicators (optional) */
+.sp-megamenu-parent .sp-has-child > a::after {
+    display: none !important;
 }
+
+/* =========================
+   MOBILE – hide all submenus
+   ========================= */
+.mod-menu .mod-menu__sub {
+    display: none !important;
+}
+
+/* Hide mobile toggler arrows */
+.mod-menu .menu-toggler {
+    display: none !important;
+}
+
 
 #sp-main-body {
   padding: 50px 0;
