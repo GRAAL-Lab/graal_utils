@@ -88,7 +88,7 @@ for i in "${arr[@]}"
 do
     if ! [ -d $i ]; then
         echo -e "${GRN}Installing $i... ${NC}"
-        git clone git@bitbucket.org:isme_robotics/$i.git
+        git clone git@github.com:GRAAL-Lab/$i.git
         cd $i
     else
         echo -e "${GRN}Updating $i... ${NC}"
