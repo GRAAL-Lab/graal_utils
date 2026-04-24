@@ -1,0 +1,6 @@
+# Ignore folders anywhere in the repo
+archival-clones/
+migration-work/
+
+# Ignore all log files
+*.log
