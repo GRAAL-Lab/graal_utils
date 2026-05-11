@@ -1,0 +1,94 @@
+\documentclass{ortotesi}
+
+\usepackage[bitstream-charter]{mathdesign}
+
+\let\tmpa\textsuperscript
+\DeclareTextCommandDefault{\textsuperscript}{\tmpa}
+\let\tmpb\textsubscript
+\DeclareTextCommandDefault{\textsubscript}{\tmpb}
+
+%\PassOptionsToPackage{svgnames,dvipsnames}{xcolor}
+%\usepackage[a-1b]{pdfx}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{ortoPackages}
+%\usepackage{chapStyle}
+
+\graphicspath{{images/},{images/theory/}}
+
+\addto\captionsenglish{%
+	\renewcommand{\appendixname}%
+	{Appendix}%
+}
+\renewcommand*\cftappendixname{\appendixname}
+
+\begin{document}
+\frontmatter
+
+\input{tex/todoList}
+\input{tex/titlePage}
+\newpage
+\input{tex/foreword}
+
+\thispagestyle{empty}
+\vspace*{10pc}
+\begin{flushright}
+\em{Dedicated to...}
+\end{flushright}
+\clearpage
+
+\input{tex/acknowledgments}
+\include{tex/abstract}
+
+%%%%%%       INDEX        %%%%%
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents*
+\clearpage
+
+\input{tex/nomenclature}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%  CHAPTERS  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+\input{tex/1_chapterIntroduction}
+\input{tex/2_chapterSingleAgentTheory}
+
+\input{tex/chapterConclusions}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%      APPENDICES     %%%%%%
+\begin{appendices}
+\addtocontents{toc}{\setlength\cftchapternumwidth{1em}} %To remove 'A' from appendix since we have only one of them
+\renewcommand{\thechapter}{}
+% INSERT HERE AN APPENDIX
+\end{appendices}
+
+%%%%  LIST OF FIGURES, TABLES  %%%%
+{
+	\linespread{1.0}
+	\small
+	\clearpage
+	%\markboth{\MakeUppercase{List Of Figures}}{\MakeUppercase{List Of Figures}}
+	\listoffigures
+	%\listoftables
+}
+
+%%%%%     BIBLIOGRAPHY     %%%%%
+{
+	\linespread{1.0}
+	\clearpage
+	\markboth{References}{References}
+	\renewcommand{\bibname}{References}
+	\bibliographystyle{IEEEtran}
+	\small \bibliography{IEEEabrv,../bib/Wanderlingh,../bib/Simetti}
+}
+
+\cfoot{\emph{Finished printing on \today\/ using \LaTeX}}
+\end{document}
