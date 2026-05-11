@@ -1,0 +1,40 @@
+\documentclass{article}
+
+% Load preamble
+\input{preamble}
+
+\begin{document}
+
+% Cover page
+\pagenumbering{gobble} % Remove numbering
+\input{TemplateElements/Cover_en}
+
+\hspace{2pt}
+
+\hypersetup{
+    pdftitle={\workTitle},
+    pdfauthor={\authorName},
+    pdfsubject={\labName},
+    pdfcreator={LaTeX}
+}
+
+% =========== TABLE OF CONTENTS =============
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+\clearpage
+
+% ================= CONTENT =================
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{Chapters/01_System_Overview}
+
+\include{Chapters/Appendix_A}
+
+% ================== BIBLIOGRAPHY =================
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+
+\end{document}

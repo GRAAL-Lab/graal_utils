@@ -1,0 +1,109 @@
+% ================= PACKAGES =================
+\usepackage[a4paper, margin=1.2in]{geometry}
+
+\usepackage[
+    colorlinks=true,
+    pdfborder={0 0 0},
+    linkcolor=black,
+    citecolor=green!50!black,
+    urlcolor=blue!80!black
+]{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{fontspec} % requires XeLaTeX or LuaLaTeX
+\usepackage{bookmark}
+\usepackage{amssymb}
+\usepackage{csquotes}
+
+
+% ================= FONTS =================
+% Path to your font folders
+\newfontfamily\bodyfont[
+    Path = Fonts/Fira_Sans/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]{FiraSans}
+
+\newfontfamily\headingfont[
+    Path = Fonts/Roboto_Slab/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = Roboto-Italic
+]{RobotoSlab}
+
+\setmainfont[
+    Path = Fonts/Fira_Sans/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]{FiraSans}
+
+
+
+% ================= HEADER =================
+\setlength{\headheight}{40pt}   % space reserved for logos
+\setlength{\headsep}{20pt}      % distance between header and text
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear everything
+
+% Logos in header
+\fancyhead[L]{\includegraphics[height=0.8cm]{TemplateElements/DIBRIS_UniGe_black_orizzontale.png}}
+\fancyhead[R]{\includegraphics[height=1cm]{TemplateElements/graal_logo2.png}}
+
+% Optional: footer
+\fancyfoot[C]{\thepage}
+
+% Remove header line
+\renewcommand{\headrulewidth}{0pt}
+
+% ================= COLORS (UniGe) =================
+\definecolor{unigeblue}{HTML}{002677}
+\definecolor{unigered}{HTML}{C8102E}
+\definecolor{unigeyellow}{HTML}{F4DA40}
+\definecolor{unigegray}{HTML}{25282A}
+
+% ================= GLOBAL STYLE =================
+\renewcommand{\familydefault}{\sfdefault}
+
+% Section styling
+\usepackage{sectsty}
+\sectionfont{\headingfont\color{unigeblue}\Large}
+\subsectionfont{\headingfont\color{unigeblue}}
+\setlength{\parskip}{0.8em}   % space between paragraphs
+\setlength{\parindent}{0pt}   % remove indentation
+
+% ================= SMART REFERENCES =================
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+\crefname{section}{Section}{Sections}
+\crefname{figure}{Figure}{Figures}
+\crefname{table}{Table}{Tables}
+\crefname{equation}{Equation}{Equations}
+
+
+
+% ================= INFO BOX =================
+\usepackage{tcolorbox}
+
+\newtcolorbox{infobox}{
+  colback=blue!5,
+  colframe=unigeblue,
+  boxrule=0.8pt,
+  arc=4pt,
+  left=10pt,
+  right=10pt,
+  top=8pt,
+  bottom=8pt
+}
+
+% ================= CUSTOM COMMANDS =================
+\newcommand{\workTitle}{Title}
+\newcommand{\subTitle}{Sub-Title}
+\newcommand{\labName}{GRAAL Lab}
+\newcommand{\authorName}{Author Name}
+\newcommand{\dateInfo}{\today}
