@@ -26,10 +26,13 @@ else
             fi
         fi
     else
-        echo "It is not ubuntu linux"
+        echo "It is not Ubuntu linux"
     fi
 fi
 
+sudo apt install -y software-properties-common
+sudo add-apt-repository -y universe
+sudo apt update
 
 
 # Generic libraries needed for math, geographic and configuration operations
@@ -39,7 +42,21 @@ sudo apt install -y libeigen3-dev libconfig++-dev libboost-all-dev
 sudo apt install -y libgps-dev gpsd-clients
 
 # Libraries needed for Graal GUIs
-sudo apt install -y qtquickcontrols2-5-dev qtlocation5-dev qtpositioning5-dev qml-module-qtquick-controls2 qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel qml-module-qtlocation qml-module-qtpositioning qml-module-qtquick-extras qml-module-qtgraphicaleffects qml-module-qtquick-dialogs qml-module-qtquick-controls python3-colcon-common-extensions qml-module-qtqml-models2 qml-module-qt-labs-platform
+sudo apt install -y \
+    qtquickcontrols2-5-dev \
+    qtlocation5-dev \
+    qtpositioning5-dev \
+    qml-module-qtquick-controls2 \
+    qml-module-qt-labs-settings \
+    qml-module-qt-labs-folderlistmodel \
+    qml-module-qtlocation \
+    qml-module-qtpositioning \
+    qml-module-qtquick-extras \
+    qml-module-qtgraphicaleffects \
+    qml-module-qtquick-dialogs \
+    qml-module-qtquick-controls \
+    qml-module-qtqml-models2 \
+    qml-module-qt-labs-platform
 
 # Do I need to say anything?
 sudo apt install -y cmake git
