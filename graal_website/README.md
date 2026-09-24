@@ -32,21 +32,25 @@ The portolio can be accessed in: `Components->TZ Portfolio`.
 
 There are two modules in `Content->Site Modules`:
 
-  - Current Projects Portfolio
-  - Past Projects Portfolio
+  - TZ Portfolio Current Projects
+  - TZ Portfolio Past Projects
 
-They just differ from the selected Category in the module.
+They differ only in the selected **Category** in the module, which are:
+  - `Current GRAAL Projects`
+  - `Past GRAAL Projects`
 
-To add/move/delete a project go to `Components->TZ Portfolio->Articles` and create a new one, selecting the "Main Category" as needed. If you have an image select as "Media Type" the option "Image", and upload one in the Image tab below. 
+To add/move/delete a project go to `Components->TZ Portfolio->Articles` and create a new one, selecting the "Main Category" as needed (Current/Past). If you have an image select as "Media Type" the option "Image", and upload one in the Image tab below. 
+
+(*N.B. Due to migration from an older portfolio version there are some dead categories called "Current Projects/Past Projects" without the GRAAL word, ignore them.*)
 
 
-### Correct Menu Routing
+### ⚠️ Correct Menu Routing
 
 When clicking on an a project, by default the website takes you to a TZ Portfolio article, and the top Main Menu loses the association with the Projects pages and by default highlights Home.
 
 To correct this behaviour you need to create a Menu Item in `Menus->Main Menu` for the project, selecting "TZ Portfolio->Single Article" in the "Menu Item Type", and then choosing the correct article.
 
-(a CSS hack has been done to hide an infinite drop-down menu in the Main Menu, with all the projects).
+(*N.B. A CSS hack has been done to hide an infinite drop-down menu in the Main Menu, with all the projects*).
 
 
 ## Page: About Us
