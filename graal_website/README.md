@@ -2,7 +2,7 @@
 
 [https://graal.dibris.unige.it](https://graal.dibris.unige.it)
 
-CMS is Joomla 5.
+CMS is Joomla 6.
 
 This is a set of info on the different modules used on the pages.
 
@@ -28,7 +28,7 @@ At the end of this file are the CSS modifications added in the Custom CSS of the
 
 Module: [**TZ Portfolio**](https://extensions.joomla.org/extension/tz-portfolio/).
 
-The portolio can be accessed in: `Components->TZ Portfolio Plus`.
+The portolio can be accessed in: `Components->TZ Portfolio`.
 
 There are two modules in `Content->Site Modules`:
 
@@ -37,14 +37,14 @@ There are two modules in `Content->Site Modules`:
 
 They just differ from the selected Category in the module.
 
-To add/move/delete a project go to `Components->TZ Portfolio Plus->Articles` and create a new one, selecting the "Main Category" as needed. If you have an image select as "Media Type" the option "Image", and upload one in the Image tab below. 
+To add/move/delete a project go to `Components->TZ Portfolio->Articles` and create a new one, selecting the "Main Category" as needed. If you have an image select as "Media Type" the option "Image", and upload one in the Image tab below. 
 
 
 ### Correct Menu Routing
 
 When clicking on an a project, by default the website takes you to a TZ Portfolio article, and the top Main Menu loses the association with the Projects pages and by default highlights Home.
 
-To correct this behaviour you need to create a Menu Item in `Menus->Main Menu` for the project, selecting "TZ Portfolio Plus->Single Article" in the "Menu Item Type", and then choosing the correct article.
+To correct this behaviour you need to create a Menu Item in `Menus->Main Menu` for the project, selecting "TZ Portfolio->Single Article" in the "Menu Item Type", and then choosing the correct article.
 
 (a CSS hack has been done to hide an infinite drop-down menu in the Main Menu, with all the projects).
 
